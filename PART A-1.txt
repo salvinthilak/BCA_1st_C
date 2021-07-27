@@ -1,0 +1,29 @@
+#include<math.h>
+#include<stdio.h>
+
+void main()
+{
+  double a,b,c, dis , root1, root2, realpart, img;
+  printf("Enter the coefficent of A, B, C :\n");
+  scanf("%lf%lf%lf",&a,&b,&c);
+  dis= ((b*b)-(4*a*c));
+  if(dis>0)
+  {
+    root1 = (-b+sqrt(dis))/(2*a);
+    root2 = (-b-sqrt(dis))/(2*a);
+    printf("root1 = %.2lf and root2 = %.2lf ",root1, root2);
+  }
+  else
+  if(dis==0)
+  {
+    root1 = root2=-b/(2*a);
+    printf("root1 & root2 = %.2lf",root1);
+  }
+  else
+  {
+  realpart = -b/(2*a);
+  img = dis/(2*a);
+  printf("root1 = %.2lf + %.2lf and root2 = %.2lf - %.2lf",realpart,img,realpart,img);
+  } 
+getch();
+}

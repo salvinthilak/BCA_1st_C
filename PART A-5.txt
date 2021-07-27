@@ -1,0 +1,49 @@
+#include <stdio.h>              
+//#include<conio.h>
+int main()                        
+{
+	int a[100],n,i,j,temp;
+        //clrscr();
+	printf("Enter total number of elements to sort: ");
+        scanf("%d",&n);
+        printf("Entered Elements are: ");        
+        for(i=0;i<n;i++)
+        {
+           scanf("%d",&a[i]);
+        }
+	for (i = 0; i < n; i++)                     
+	{
+		for (j = i+1; j < n; j++)             
+		{
+			if (a[j] > a[i])                
+			{
+				temp = a[i];         
+				a[i] = a[j];            
+				a[j] = temp;            
+			}  
+		}
+	}
+	printf("\n\nDescending order : ");                     
+	for (i = 0; i < n; i++)                     
+	{
+		printf(" %d ", a[i]);
+	}
+	for (i = 0; i < n; i++)                     
+	{
+		for (j = i+1; j < n; j++)             
+		{
+			if (a[j] < a[i])               
+			{
+				temp = a[i];          
+				a[i] = a[j];            
+				a[j] = temp;             
+			}
+		}
+	}
+	printf("\n\nAscending order: ");                    
+	for (i = 0; i < n; i++)                     
+	{
+		printf(" %d ", a[i]);                   
+	}         
+
+}

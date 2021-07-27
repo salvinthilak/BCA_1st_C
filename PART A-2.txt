@@ -1,0 +1,36 @@
+/*Write a menu driven C program using switch-case to find: (a) Sum of the digits of
+number (b) Factorial of N.*/
+
+#include<stdio.h>
+//#include<conio.h>
+int main()
+{
+    int number,sum =0,fact = 1,choice;
+    //clrscr();
+    printf("\nEnter any number :");
+    scanf("%d",&number);    
+    printf("\n1. For summation \n2. For factorial\n");
+    scanf("%d",&choice);
+    switch(choice)
+    {
+        case 1:
+            while(number>0)
+            {
+                sum = sum+(number%10);
+                number = number/10;
+            }
+            printf("Sum = %d\n",sum);
+            break;
+        case 2:
+            while (number>0)
+            {
+                fact = fact*number;
+                number--;
+            }
+            printf("Factorial is %d .\n",fact);
+            break;
+        default:
+            printf("\nError\n");
+    }
+    return 0;
+}

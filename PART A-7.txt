@@ -1,0 +1,24 @@
+#include <stdio.h>
+//#include <conio.h>
+int fact(int);
+int main()
+{
+ int n,r,ncr;
+ //clrscr(); 
+ printf("Enter a number N :");
+ scanf("%d",&n);
+ printf("Enter a number 'r' greater than N :\n");
+ scanf("%d",&r);
+ ncr=fact(n)/(fact(r)*fact(n-r));
+ printf("Value of %dC%d = %d\n",n,r,ncr);
+ 
+}
+int fact(int n)
+ {
+    int i,f=1;
+    for(i=1;i<=n;i++)
+    {
+        f=f*i;
+    }
+    return f;
+ }

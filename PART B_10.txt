@@ -1,0 +1,16 @@
+#include<stdio.h>
+//#include<conio.h>
+
+int main()
+{
+FILE *fp;
+char text[30];
+fp=fopen("Text.txt","w");
+//clrscr();
+printf("\n Enter the text:");
+gets(text);
+printf("%s",text);
+fclose(fp);
+printf("\n File 'Text.txt' is created and text is entered.");
+//getch();
+}

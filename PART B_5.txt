@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+	char str1[50]="oxford", str2[50]="collage";
+	//char str1[50], str2[50];
+	/*
+	printf("\nEnter the string1:");
+	gets(str1);
+	printf("\nEnter the string2:");
+	gets(str2);
+	*/
+	strcat(str1,str2);
+	printf("The Concatenated string is: %s", str1);
+	//getch();
+}
+
+	
+

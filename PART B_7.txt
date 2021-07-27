@@ -1,0 +1,18 @@
+#include <stdio.h>
+//#include <conio.h>
+
+int main()
+{
+	int elements [5], i, n, sum = 0, average;
+	printf("Enter 5 numbers in to the array:\n"); 
+	for(i=0; i<5; i++)
+	{
+		printf("Enter number %d :",i+1);
+		scanf("%d", &elements[i]); 
+		sum= sum + elements[i];
+	}
+	printf("Sum = %d", sum);
+	average = sum/5;
+	printf("\nAverage = %d", average); 
+	//getch(); 
+}
